@@ -1,10 +1,11 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="4" v-for="item in menuNameList" :key="item">
+      <v-col cols="3" v-for="item in menuNameList" :key="item">
         <v-card>
           <router-link class="routerlnk" :to="{ path: '/' + item.title }">
             <v-img :src="item.img"></v-img>
+
             <v-card-title>
               {{ item.title }}
             </v-card-title>
