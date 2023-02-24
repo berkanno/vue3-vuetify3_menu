@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="4">
-      <v-btn class="mx-16 px-5" color="blue-darken-4" elevation="8" >
+      <v-btn class="mx-16 px-5" color="blue-darken-4" elevation="8">
         <router-link to="/" class="routerlink">
           <v-icon icon="mdi-arrow-left"></v-icon>
         </router-link>
@@ -10,7 +10,7 @@
   </v-row>
   <v-container class="mt-4">
     <v-row justify="center">
-      <v-col cols="3" v-for="item in menuİnf" :key="item">
+      <v-col cols="4" v-for="item in menuİnf" :key="item">
         <v-card elevation="16">
           <v-img :src="item.img"></v-img>
           <v-card-title class="ttl">{{ item.name }}</v-card-title>
@@ -30,9 +30,11 @@ export default {
   },
   mounted() {
     axios
-      .get("https://free-food-menus-api-production.up.railway.app/fried-chicken")
+      .get(
+        "https://free-food-menus-api-production.up.railway.app/fried-chicken"
+      )
       .then((response) => {
-        this.menuİnf = response.data;
+        this.menuİnf = response.data.splice(25, 15);
       })
       .catch((e) => {
         console.log("hata:", e);
