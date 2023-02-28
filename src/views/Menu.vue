@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="3" v-for="item in menuNameList" :key="item">
-        <v-card>
+      <v-col cols="5" v-for="item in menuNameList" :key="item">
+        <v-card flat>
           <router-link class="routerlnk" :to="{ path: '/' + item.title }">
             <v-img :src="item.img"></v-img>
 
@@ -17,37 +17,31 @@
 </template>
 
 <script>
-import bbqs from "@/image/bbqs.png";
-import breads from "@/image/breads.png";
-import burgers from "@/image/burgers.png";
-import chocolates from "@/image/chocolates.png";
-import desserts from "@/image/desserts.png";
-import drinks from "@/image/drinks.png";
-import friedChicken from "@/image/fried-chicken.png";
-import iceCream from "@/image/ice-cream.png";
-import pizzas from "@/image/pizzas.png";
-import porks from "@/image/porks.png";
-import sandwiches from "@/image/sandwiches.png";
-import sausages from "@/image/sausages.png";
-import steaks from "@/image/steaks.png";
-
 export default {
   data() {
     return {
       menuNameList: [
-        { id: 0, title: "bbqs", img: bbqs },
-        { id: 1, title: "breads", img: breads },
-        { id: 2, title: "burgers", img: burgers },
-        { id: 3, title: "chocolates", img: chocolates },
-        { id: 4, title: "desserts", img: desserts },
-        { id: 5, title: "drinks", img: drinks },
-        { id: 6, title: "fried-chicken", img: friedChicken },
-        { id: 7, title: "ice-cream", img: iceCream },
-        { id: 9, title: "pizzas", img: pizzas },
-        { id: 10, title: "porks", img: porks },
-        { id: 11, title: "sandwiches", img: sandwiches },
-        { id: 12, title: "sausages", img: sausages },
-        { id: 13, title: "steaks", img: steaks },
+        {
+          id: 0,
+          title: "Dinner",
+          img: "https://cdn.pixabay.com/photo/2015/05/31/11/18/table-setting-791149__340.jpg",
+        },
+        {
+          id: 0,
+          title: "Lunch",
+          img: "https://cdn.pixabay.com/photo/2016/11/22/18/58/bowl-1850039__340.jpg",
+        },
+        {
+          id: 0,
+          title: "Snack",
+          img: "https://cdn.pixabay.com/photo/2016/06/07/17/15/yogurt-1442034__340.jpg",
+        },
+
+        {
+          id: 2,
+          title: "Breakfast",
+          img: "https://media.istockphoto.com/id/938158500/tr/foto%C4%9Fraf/kahvalt%C4%B1-masas%C4%B1.jpg?b=1&s=170667a&w=0&k=20&c=HdhtsRDquD5ZT5XoY_RaGy1FDwERoPg-P3NxHMT1Obc=",
+        },
       ],
     };
   },

@@ -8,13 +8,14 @@
       </v-btn>
     </v-col>
   </v-row>
-  <v-container class="mt-4">
+  <v-container class="mt-4 px-16">
     <v-row justify="center">
-      <v-col cols="4" v-for="item in menuİnf" :key="item">
-        <v-card elevation="16">
-          <v-img :src="item.img"></v-img>
-          <v-card-title class="ttl">{{ item.name }}</v-card-title>
-          <v-card-title class="ttl">{{ item.price }}$</v-card-title>
+      <v-col cols="4" v-for="item in menuİnf.hits" :key="item">
+        <v-card flat class="py-8">
+          <v-img :src="item.recipe.image" max-width="100%"></v-img>
+          <v-row>
+            <v-card-text class="ttl">{{ item.recipe.label }}</v-card-text>
+          </v-row>
         </v-card>
       </v-col>
     </v-row>
@@ -30,9 +31,11 @@ export default {
   },
   mounted() {
     axios
-      .get("https://free-food-menus-api-production.up.railway.app/porks")
+      .get(
+        "https://api.edamam.com/api/recipes/v2?type=public&app_id=5b31234f&app_key=2381d9ca3c66cd815d5f49c76458a396&diet=balanced&health=egg-free&cuisineType=British&mealType=Lunch&imageSize=REGULAR&field=label&field=image&field=source&field=totalTime"
+      )
       .then((response) => {
-        this.menuİnf = response.data.splice(0, 24);
+        this.menuİnf = response.data;
       })
       .catch((e) => {
         console.log("hata:", e);
@@ -40,12 +43,14 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .ttl {
   color: blue;
   font-family: "Times New Roman", Times, serif;
   font-weight: 900;
   font-size: x-large;
+  margin: 10px;
+  text-align: center;
 }
 .routerlink {
   text-decoration: none;
