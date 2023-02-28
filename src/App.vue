@@ -1,32 +1,18 @@
 <template>
-  <v-app>
-    <v-col>
-      <v-toolbar color="white">
-        <v-toolbar-title>
-          <span
-            style="
-              color: blue;
-              font-family: 'Times New Roman', Times, serif;
-              font-size: xx-large;
-            "
-            >Lezzet</span
-          ><span
-            style="
-              color: darkblue;
-              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-                sans-serif;
-              font-size: x-large;
-              font-weight: bold;
-            "
-            >Durağı</span
-          >
-        </v-toolbar-title>
-      </v-toolbar>
-    </v-col>
+  <v-app class="mb-0">
+    <app-toolbar />
     <router-view></router-view>
+    <app-footer />
   </v-app>
 </template>
 
-<script setup></script>
-
-<style scoped></style>
+<script>
+import appToolbar from '@/views/Toolbar.vue';
+import appFooter from '@/views/Footer.vue';
+export default {
+  components: {
+    appToolbar,
+    appFooter,
+  }
+}
+</script>
