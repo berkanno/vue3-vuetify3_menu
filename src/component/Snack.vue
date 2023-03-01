@@ -1,13 +1,13 @@
 <template>
-  <v-row>
-    <v-col cols="4">
-      <v-btn class="mx-16 px-5" color="blue-darken-4" elevation="8">
-        <router-link to="/" class="routerlink">
-          <v-icon icon="mdi-arrow-left"></v-icon>
-        </router-link>
-      </v-btn>
-    </v-col>
-  </v-row>
+    <v-row>
+      <v-col cols="2">
+        <v-btn class="ml-8" color="indigo-darken-4" elevation="8">
+          <router-link to="/" class="routerlink">
+            <v-icon icon="mdi-arrow-left" id="go-to-top"></v-icon>
+          </router-link>
+        </v-btn>
+      </v-col>
+    </v-row>
   <v-container class="mt-4 px-16">
     <v-row justify="center">
       <v-col cols="4" v-for="(item, i) in menuİnf" :key="item">
