@@ -16,7 +16,7 @@
         sm="6"
         md="3"
         lg="2"
-        xl="1"
+        xl="2"
         v-for="(item, i) in menuİnf"
         :key="item"
       >
