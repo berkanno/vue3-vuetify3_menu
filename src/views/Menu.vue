@@ -1,7 +1,15 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="5" v-for="item in menuNameList" :key="item">
+      <v-col
+        cols="12"
+        sm="12"
+        md="12"
+        lg="6"
+        xl="6"
+        v-for="item in menuNameList"
+        :key="item"
+      >
         <v-card flat>
           <router-link class="routerlnk" :to="{ path: '/' + item.title }">
             <v-img :src="item.img"></v-img>
