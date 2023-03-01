@@ -61,6 +61,23 @@
       </v-dialog>
     </v-row>
   </v-container>
+  <v-card >
+    <v-row justify="end">
+      <v-col cols="2">
+        <v-btn
+          class="mx-8"
+          color="indigo-darken-4"
+          flat
+        >
+          <v-row justify="center">
+            <a href="#go-to-top" class="routerlink">
+              <v-icon icon="mdi-arrow-up"></v-icon>
+            </a>
+          </v-row>
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-card>
 </template>
 <script>
 import axios from "axios";
