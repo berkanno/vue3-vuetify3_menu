@@ -1,9 +1,9 @@
 <template>
-  <v-footer color="light-blue-darken-4" class="mt-4">
+  <v-footer color="blue-darken-4" class="mt-4">
     <v-row justify="center" class="my-3 ml-16">
       <v-col cols="4" v-for="item in informations" :key="item">
         <v-row justify="center"></v-row>
-        <v-card flat class="pl-7 ml-15" color="light-blue-darken-4">
+        <v-card flat class="pl-7 ml-15" color="blue-darken-4">
           <v-card-title>
             {{ item.title }}
           </v-card-title>
