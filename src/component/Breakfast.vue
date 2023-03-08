@@ -126,7 +126,7 @@ export default {
   },
   methods: {
     onClick(i) {
-      console.log(i);
+      
       this.selectDetails = this.menuİnf[i].recipe.ingredientLines;
       this.showDialog = true;
     },

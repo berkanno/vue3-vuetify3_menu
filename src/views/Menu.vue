@@ -1,12 +1,15 @@
 <template>
+  <v-row justify="center" class="mt-16">
+    <v-col cols="8" >
+
   <v-container>
     <v-row justify="center">
       <v-col
         cols="12"
-        sm="12"
-        md="12"
-        lg="6"
-        xl="6"
+        sm="6"
+        md="4"
+        lg="4"
+        xl="4"
         v-for="item in menuNameList"
         :key="item"
       >
@@ -22,6 +25,8 @@
       </v-col>
     </v-row>
   </v-container>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
