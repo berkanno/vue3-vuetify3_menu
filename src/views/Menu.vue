@@ -14,12 +14,19 @@
           >
             <v-card flat width="100%">
               <router-link class="routerlnk" :to="{ path: '/' + item.title }">
-                <v-img :src="item.img" width="100%" class="d-flex align-end">
-                  <v-card class="transp text-white" flat>
-                    
-                    {{ item.title }}
-                  </v-card>
-                </v-img>
+                <v-progress-linear
+                  indeterminate
+                  color="blue"
+                  width="100%"
+                  height="100%"
+                  class="progress-linear"
+                >
+                  <v-img :src="item.img" width="100%" cover class="d-flex align-end">
+                    <v-card class="transp text-white" flat>
+                      {{ item.title }}
+                    </v-card>
+                  </v-img>
+                </v-progress-linear>
               </router-link>
             </v-card>
           </v-col>
