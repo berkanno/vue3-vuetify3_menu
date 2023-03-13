@@ -20,13 +20,13 @@
         v-for="(item, i) in menuİnf"
         :key="item"
       >
-        <v-card height="100%" width="100%" flat @click="($event) => onClick(i)">
+        <v-card height="100%" width="100%" flat @click="($event) => onClick(i)" >
           <v-progress-linear
             indeterminate
             color="blue"
             width="100%"
             height="100%"
-            class="d-flex align-end"
+            class="progress-linear"
           >
             <v-img
               :src="item.recipe.image"
@@ -34,7 +34,7 @@
               cover
               class="d-flex align-end"
             >
-              <v-card class="text-center text-caption ddd" height="40">
+              <v-card class="text-center text-caption ddd mt-16" height="40">
                 {{ item.recipe.label }}
               </v-card>
             </v-img>
@@ -58,12 +58,11 @@
 
               <v-row justify="end">
                 <v-card
-                  class="mt-4 mr-10"
+                  class="mt-4 mr-10 opac"
                   width="300"
-                  color="blue-grey-darken-2"
                   max-height="100%"
                 >
-                  <v-col cols="12" class="text-h6 text-center">
+                  <v-col cols="12" class="text-h6 text-center text-white">
                     {{ selectTitle }}
                   </v-col>
                   <v-card-text class="text-overline text-white text-sm-left">
@@ -145,5 +144,12 @@ export default {
 .ddd {
   background-color: rgba(0, 0, 255, 0.9);
   color: aliceblue;
+  
+}
+.opac{
+  background-color: rgba(61, 61, 61, 0.9);
+}
+.progress-linear{
+ 
 }
 </style>
