@@ -13,7 +13,7 @@
     <v-row justify="center">
       <v-col
         cols="12"
-        sm="6"
+        sm="4"
         md="3"
         lg="2"
         xl="2"
