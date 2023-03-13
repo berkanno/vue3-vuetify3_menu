@@ -1,30 +1,30 @@
 <template>
   <v-row justify="center" class="mt-16">
-    <v-col cols="8" >
-
-  <v-container>
-    <v-row justify="center">
-      <v-col
-        cols="12"
-        sm="6"
-        md="4"
-        lg="4"
-        xl="4"
-        v-for="item in menuNameList"
-        :key="item"
-      >
-        <v-card flat>
-          <router-link class="routerlnk" :to="{ path: '/' + item.title }">
-            <v-img :src="item.img"></v-img>
-
-            <v-card-title>
-              {{ item.title }}
-            </v-card-title>
-          </router-link>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+    <v-col cols="8">
+      <v-container>
+        <v-row justify="center">
+          <v-col
+            cols="12"
+            sm="6"
+            md="4"
+            lg="4"
+            xl="4"
+            v-for="item in menuNameList"
+            :key="item"
+          >
+            <v-card flat width="100%">
+              <router-link class="routerlnk" :to="{ path: '/' + item.title }">
+                <v-img :src="item.img" width="100%" class="d-flex align-end">
+                  <v-card class="transp text-white" flat>
+                    
+                    {{ item.title }}
+                  </v-card>
+                </v-img>
+              </router-link>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-col>
   </v-row>
 </template>
@@ -65,5 +65,8 @@ export default {
   text-decoration: none;
   text-align: center;
   color: blue;
+}
+.transp {
+  background-color: rgba(0, 0, 255, 0.9);
 }
 </style>
