@@ -149,7 +149,4 @@ export default {
 .opac{
   background-color: rgba(61, 61, 61, 0.9);
 }
-.progress-linear{
- 
-}
 </style>
